@@ -1,0 +1,22 @@
+{
+  "name": "G4G Remova",
+  "version": "1.0",
+  "description": "This extension removes all the elements from the webpage except the main data.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+        "matches": ["https://www.geeksforgeeks.org/*"],
+        "exclude_matches": ["https://www.geeksforgeeks.org/"],
+        "js": ["/content_script.js"]
+    },
+    {
+        "matches": ["https://www.geeksforgeeks.org/"],
+        "js": ["/home_page.js"]
+    }
+  ],
+  "icons": {
+    "16": "/images/remove16.png",
+    "48": "/images/remove48.png",
+    "128": "/images/remove128.png"
+  }
+}
